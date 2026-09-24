@@ -2,23 +2,23 @@
 
 This project demonstrates an end-to-end data engineering and exploratory data analysis (EDA) workflow using Python, PostgreSQL, Pandas, and Jupyter Notebook.
 
-The project generates a synthetic employee dataset, stores the data in a PostgreSQL database, retrieves it for analysis, and performs data cleaning, transformation, statistical analysis, feature engineering, and visualization.
+The project generates a synthetic employee dataset, stores the data in a PostgreSQL database, retrieves it into Python for analysis, and performs data cleaning, transformation, statistical analysis, feature engineering, and visualization.
 
 ## Project Workflow
 
 The notebook demonstrates:
 
-* Synthetic employee data generation using Faker
-* Object-oriented programming (OOP) for organizing the workflow
-* PostgreSQL database storage and retrieval
-* Database connectivity using psycopg2
-* Data cleaning and transformation with Pandas
-* Descriptive statistical analysis
-* Feature engineering
-* Salary standardization
-* Dataset merging
-* Data visualization with Matplotlib and Seaborn
-* Grouped analysis and heatmap visualization
+- Synthetic employee data generation using Faker
+- Object-oriented programming (OOP) for organizing the workflow
+- PostgreSQL database storage and retrieval
+- Database connectivity using psycopg2
+- Data cleaning and transformation with Pandas
+- Descriptive statistical analysis
+- Feature engineering
+- Salary standardization
+- Dataset merging
+- Data visualization with Matplotlib and Seaborn
+- Grouped analysis and heatmap visualization
 
 ## Project Structure
 
@@ -42,15 +42,17 @@ data-engineering-eda/
 
 The `notebooks`, `prompts`, and `src` directories are included as part of the project structure and are currently empty.
 
+The `.env` file required for the database connection is not stored in this GitHub repository. It will be provided separately.
+
 ## Requirements
 
 Before running the project, make sure you have:
 
-* Python 3 installed
-* Git installed
-* Visual Studio Code
-* Jupyter support in VS Code
-* Access to a PostgreSQL database
+- Python 3 installed
+- Git installed
+- Visual Studio Code
+- Jupyter support in VS Code
+- The provided `.env` file containing the required PostgreSQL database connection information
 
 ## How to Download and Run the Project
 
@@ -76,7 +78,7 @@ From the repository folder, run:
 code .
 ```
 
-Alternatively, open VS Code, select **File → Open Folder**, and select the `data-engineering-eda` folder.
+Alternatively, open Visual Studio Code, select **File → Open Folder**, and select the `data-engineering-eda` folder.
 
 ### 3. Create a Virtual Environment
 
@@ -90,7 +92,7 @@ This creates an isolated Python environment for the project.
 
 ### 4. Activate the Virtual Environment
 
-On Windows PowerShell:
+On Windows PowerShell, run:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
@@ -106,21 +108,30 @@ Run:
 python -m pip install -r requirements.txt
 ```
 
-This installs the Python libraries required by the project.
+This installs the Python libraries required to run the project.
 
-### 6. Configure the Database Connection
+### 6. Add the Provided `.env` File
 
-Create a file named:
+The `.env` file containing the required PostgreSQL database connection information will be provided separately.
+
+Place the provided `.env` file in the root directory of the cloned repository:
 
 ```text
-.env
+data-engineering-eda/
+│
+├── notebooks/
+├── prompts/
+├── src/
+├── .env
+├── data_engineering_eda.ipynb
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
-in the root of the project.
+Do not rename or modify the `.env` file unless instructed to do so.
 
-Store the PostgreSQL connection information required by the notebook in this file.
-
-The `.env` file should **not** be committed to GitHub because it may contain private database credentials.
+The `.env` file is excluded from GitHub because it contains private database credentials.
 
 ### 7. Open the Jupyter Notebook
 
@@ -130,18 +141,18 @@ Open:
 data_engineering_eda.ipynb
 ```
 
-in VS Code.
+in Visual Studio Code.
 
 When prompted to select a Jupyter kernel, select the Python interpreter from the project's `.venv` environment.
 
-You can verify that the notebook is using the correct environment with:
+You can verify that the notebook is using the correct Python environment by running:
 
 ```python
 import sys
 print(sys.executable)
 ```
 
-The path should point to:
+The displayed path should point to the project's virtual environment, similar to:
 
 ```text
 data-engineering-eda\.venv\Scripts\python.exe
@@ -159,23 +170,25 @@ Run the notebook from top to bottom so that data generation, database operations
 
 The primary employee dataset used in this project is generated programmatically using the Python Faker library rather than downloaded as a static external dataset.
 
-The generated data contains employee information used throughout the database and exploratory data analysis workflow.
-
-**Additional dataset:** Add the source link for the department dataset used during the dataset-merging portion of the notebook here.
+The generated dataset contains employee information used throughout the database and exploratory data analysis workflow.
 
 ## Technologies
 
-* Python
-* Jupyter Notebook
-* PostgreSQL
-* Pandas
-* NumPy
-* Faker
-* psycopg2
-* scikit-learn
-* Matplotlib
-* Seaborn
+- Python
+- Jupyter Notebook
+- PostgreSQL
+- Pandas
+- NumPy
+- Faker
+- psycopg2
+- scikit-learn
+- Matplotlib
+- Seaborn
 
 ## Security
 
-.env file not posted, will be emailed in a zip folder under subject line "9115726 - Data Engineering & EDA Workshop"
+The `.env` file containing the PostgreSQL database credentials is intentionally excluded from this GitHub repository for security.
+
+For assignment submission, the required `.env` file will be provided separately in the submitted ZIP folder under the subject line **"9115726 - Data Engineering & EDA Workshop"**.
+
+Database credentials and other sensitive configuration information should never be committed to the GitHub repository.
